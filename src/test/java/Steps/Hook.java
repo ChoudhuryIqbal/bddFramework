@@ -28,7 +28,9 @@ public class Hook extends BaseUtil{
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\choudhuryIqbal\\eclipse-workspace\\bdd-framework\\driver\\chromedriver.exe");
 		base.driver=new ChromeDriver();
 		//driver.get("http://www.phptravels.net/");
-		
+		base.driver.manage().window().maximize();
+		base.driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		base.driver.get("http://www.phptravels.net/");
 	}
 	
 	@After
