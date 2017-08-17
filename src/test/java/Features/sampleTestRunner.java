@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
  r*
  */
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src\\test\\java\\Features")
+@CucumberOptions(features="src\\test\\java\\Features",glue= {"Steps"})
 public class sampleTestRunner {
 
 }

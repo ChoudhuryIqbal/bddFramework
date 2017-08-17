@@ -3,6 +3,11 @@
  */
 package Steps;
 
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import base.BaseUtil;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -12,7 +17,7 @@ import cucumber.api.java.Before;
  * @author choudhuryIqbal
  *
  */
-public class Hook {
+public class Hook extends BaseUtil{
 	private BaseUtil base;
 	public Hook (BaseUtil base) {
 		this.base=base;
@@ -20,6 +25,9 @@ public class Hook {
 	
 	@Before
 	public void InitializeTest() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\choudhuryIqbal\\eclipse-workspace\\bdd-framework\\driver\\chromedriver.exe");
+		base.driver=new ChromeDriver();
+		//driver.get("http://www.phptravels.net/");
 		
 	}
 	
