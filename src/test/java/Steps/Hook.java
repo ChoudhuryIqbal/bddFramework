@@ -25,7 +25,9 @@ public class Hook {
 	
 	@After
 	public void TearDownTest(Scenario scenario) {
-		
+		if (scenario.isFailed()) {
+			System.out.println(scenario.getName());
+		}
 	}
 
 }
